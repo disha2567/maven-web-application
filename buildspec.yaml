@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17  # Use the desired Java version, e.g., corretto8 for Java 8
+    commands:
+      - echo "[INFO] Installing Maven"
+      - apt-get update -y
+      - apt-get install -y maven
+   build:
+    commands:
+      - echo "[INFO] Building Java application"
+      - mvn clean install  
+artifacts:
+  files: **/*
