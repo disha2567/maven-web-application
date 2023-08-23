@@ -8,9 +8,9 @@ phases:
       - echo "[INFO] Installing Maven"
       - apt-get update -y
       - apt-get install -y maven
-   build:
+  build:
     commands:
       - echo "[INFO] Building Java application"
       - mvn clean install  
 artifacts:
-  files: **/*
+  files: '**/*'
